@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Stack, Tag, Text } from "@chakra-ui/react";
 import car from "../../assets/car.jpg";
 import { ButtonComponent } from "../Button";
-export const CardProfileComponent = () => {
+export const CardAdvertiseProfileComponent = () => {
   return (
     <Stack
       w={"312px"}
