@@ -1,15 +1,5 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  Stack,
-  Tag,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Stack, Tag, Text } from "@chakra-ui/react";
 import car from "../../assets/car.jpg";
-import { useState } from "react";
 import { ButtonComponent } from "../Button";
 export const CardProfileComponent = () => {
   return (
@@ -19,12 +9,17 @@ export const CardProfileComponent = () => {
         img: {
           transform: "scale(1.1)",
         },
-        ".css-i6bazn !important": {
-          borderColor: "blue",
+        ".image-box:first-child": {
+          border: "2px solid blue",
         },
       }}
     >
-      <Box overflow={"hidden"} border={"2px solid #fff"}>
+      <Box
+      className={"image-box"}
+        overflow={"hidden"}
+        transition={"0.2s ease"}
+        border={"2px solid #fff"}
+      >
         <Image transition={"0.2s ease"} src={car} />
       </Box>
       <Stack>
