@@ -1,14 +1,9 @@
 import { VStack } from "@chakra-ui/react";
 import { ButtonComponent } from "../../components/Button";
+import { Header } from "../../components/Header";
 
 export const Homepage = () => {
   return (
-    <VStack>
-      
-
-      <ButtonComponent border={"2px solid black"}  bgColor={"transparent"}>Variant</ButtonComponent>
-      <ButtonComponent />
-      <ButtonComponent />
-    </VStack>
+    <Header/>
   );
 };
