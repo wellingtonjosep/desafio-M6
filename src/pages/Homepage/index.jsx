@@ -1,14 +1,5 @@
-import { VStack } from "@chakra-ui/react";
-import { ButtonComponent } from "../../components/Button";
+import { Center } from "@chakra-ui/react";
 
 export const Homepage = () => {
-  return (
-    <VStack>
-      
-
-      <ButtonComponent border={"2px solid black"}  bgColor={"transparent"}>Variant</ButtonComponent>
-      <ButtonComponent />
-      <ButtonComponent />
-    </VStack>
-  );
+  return <Center w={"40vw"}></Center>;
 };
