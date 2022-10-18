@@ -1,9 +1,5 @@
-import { VStack } from "@chakra-ui/react";
-import { ButtonComponent } from "../../components/Button";
-import { Header } from "../../components/Header";
+import { Center } from "@chakra-ui/react";
 
 export const Homepage = () => {
-  return (
-    <Header/>
-  );
+  return <Center w={"40vw"}></Center>;
 };
