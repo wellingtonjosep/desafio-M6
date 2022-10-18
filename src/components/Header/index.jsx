@@ -1,18 +1,22 @@
 import {
   Box,
   Button,
+  Collapse,
   HStack,
   Icon,
   Image,
   Link,
+  useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import logo from "../../assets/logo-header.svg";
 import { globalStyles } from "../../styles/global";
 import { BiMenu } from "react-icons/bi";
-import { ButtonComponent } from "../Button";
+import { MdOutlineClose } from "react-icons/md"
+import { ModalHeaderMobile } from "../ModalHeaderMobile";
 
 export const Header = () => {
+  const { isOpen, onToggle } = useDisclosure();
   return (
     <>
       <HStack
@@ -28,12 +32,14 @@ export const Header = () => {
           mr="auto"
           ml={{ base: "16px", md: "30px", lg: "60px" }}
         />
-        <Icon h={"55px"} pt={4} pr={"16px"} display={{ md: "none" }} w>
-          <BiMenu />
+        <Icon onClick={onToggle} h={"55px"} pt={4} pr={"16px"} display={{ md: "none" }} w>
+            {
+                isOpen ? <MdOutlineClose/> : <BiMenu />
+            }
         </Icon>
         <HStack
           h={"80px"}
-          w={{md: "210px", lg: "250px"}}
+          w={{ md: "210px", lg: "250px" }}
           justifyContent="space-evenly"
           borderRight={`2px solid ${globalStyles.grey6}`}
           display={{ base: "none", md: "flex" }}
@@ -57,13 +63,16 @@ export const Header = () => {
             Motos
           </Link>
         </HStack>
-        <HStack paddingRight={{md: "25px", lg: "60px"}} display={{ base: "none", md: "flex" }}>
+        <HStack
+          paddingRight={{ md: "25px", lg: "60px" }}
+          display={{ base: "none", md: "flex" }}
+        >
           <Link
             fontSize={"16px"}
             fontFamily="Inter"
             fontWeight={"600"}
-            ml={{md: "25px", lg: "44px"}}
-            mr={{md: "25px", lg: "44px"}}
+            ml={{ md: "25px", lg: "44px" }}
+            mr={{ md: "25px", lg: "44px" }}
             color={globalStyles.brand1}
             href="/"
           >
@@ -75,12 +84,15 @@ export const Header = () => {
             fontWeight={"600"}
             w={"133px"}
             h={"48px"}
-            border={`1.5px solid ${globalStyles.grey4}`}
+            border={`2px solid ${globalStyles.grey4}`}
             bgColor={globalStyles.grey10}
           >
             Cadastrar
           </Button>
         </HStack>
+        {
+            isOpen && <ModalHeaderMobile/>
+        }
       </HStack>
     </>
   );
