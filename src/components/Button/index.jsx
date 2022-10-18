@@ -6,7 +6,7 @@ export const ButtonComponent = ({
   fontWeight,
   fontSize,
   hover,
-  focus,
+  active,
   color,
   variant,
   children,
@@ -21,7 +21,7 @@ export const ButtonComponent = ({
       fontWeight={fontWeight}
       fontSize={fontSize}
       _hover={hover}
-      _focus={focus}
+      _active={active}
       variant={variant}
       border={border}
       weight={weight}
