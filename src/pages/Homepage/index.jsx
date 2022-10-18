@@ -1,5 +1,6 @@
 import { Center } from "@chakra-ui/react";
+import { Header } from "../../components/Header";
 
 export const Homepage = () => {
-  return <Center w={"40vw"}></Center>;
+  return <Header/>
 };
