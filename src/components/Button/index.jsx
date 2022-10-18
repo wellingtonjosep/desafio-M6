@@ -1,4 +1,4 @@
-import { border, Button } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 export const ButtonComponent = ({
   bgColor,
