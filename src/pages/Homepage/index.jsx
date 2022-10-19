@@ -1,14 +1,10 @@
 import { Center } from "@chakra-ui/react";
-import { ModalAdCreated } from "../../components/ModalAdCreated";
-import { ModalAdRemoved } from "../../components/ModalAdRemoved";
-import { ModalSignup } from "../../components/ModalSignup";
+import { ModalEditAd } from "../../components/ModalEditAd";
 
 export const Homepage = () => {
   return (
     <Center w={"40vw"}>
-      <ModalSignup />
-      <ModalAdCreated />
-      <ModalAdRemoved />
+      <ModalEditAd />
     </Center>
   );
 };
