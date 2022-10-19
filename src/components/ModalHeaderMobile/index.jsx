@@ -13,6 +13,8 @@ export const ModalHeaderMobile = () => {
       position={"fixed"}
       justifyContent={"center"}
       pb={"20px"}
+      bgColor={globalStyles.grey10}
+      zIndex={1}
     >
       <VStack
         alignItems={"left"}
