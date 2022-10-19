@@ -1,4 +1,4 @@
-import { Button, flexbox, Link, VStack } from "@chakra-ui/react";
+import { Button, Link, VStack } from "@chakra-ui/react";
 import { globalStyles } from "../../styles/global";
 
 export const ModalHeaderMobile = () => {
