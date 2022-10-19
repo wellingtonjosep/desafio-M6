@@ -12,6 +12,7 @@ export const ButtonComponent = ({
   children,
   border,
   weight,
+  mr,
 }) => {
   return (
     <Button
@@ -25,6 +26,7 @@ export const ButtonComponent = ({
       variant={variant}
       border={border}
       weight={weight}
+      mr={mr}
     >
       {children}
     </Button>
