@@ -8,7 +8,7 @@ import { Homepage } from "./pages/Homepage/index";
 function App() {
   return (
     <VStack>
-      <ModalDelete />
+      <Header/>
     </VStack>
   );
 }
