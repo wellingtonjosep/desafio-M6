@@ -6,6 +6,7 @@ export const globalStyles = {
     brand3:                   "#B0A6F0",
     brand4:                   "#EDEAFD",
 
+    black:                    "#000000",
     grey0:                    "#0B0D0D",
     grey1:                    "#212529",
     grey2:                    "#495057",

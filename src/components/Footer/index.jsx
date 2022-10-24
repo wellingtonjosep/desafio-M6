@@ -7,14 +7,14 @@ export const Footer = () => {
   return (
     <VStack
       w={"100vw"}
-      h={{base: "310px", md: "140px"}}
-      justifyContent={{ base: "space-evenly", md: "space-between"}}
+      h={{ base: "310px", md: "140px" }}
+      justifyContent={{ base: "space-evenly", md: "space-between" }}
       alignItems={{ base: "center" }}
       bgColor={globalStyles.grey0}
-      flexDirection={{base: "column", md: "row"}}
+      flexDirection={{ base: "column", md: "row" }}
       mt={{ base: "100px" }}
     >
-      <Image ml={{base: "0px", md: "56px"}} src={logo} alt="logo site" />
+      <Image ml={{ base: "0px", md: "36px" }} src={logo} alt="logo site" />
       <Text
         fontFamily={"Inter"}
         fontWeight={"400"}
@@ -23,15 +23,17 @@ export const Footer = () => {
       >
         © 2022 - Todos os direitos reservados.
       </Text>
-      <Button
-        h={"50px"}
-        w={"53"}
-        borderRadius={"4px"}
-        bgColor={globalStyles.grey1}
-        mr={{base: "0px", md: "56px"}}
-      >
-        <Image src={icon} alt="logo site" />
-      </Button>
+      <VStack>
+        <Button
+          h={"50px"}
+          w={"53"}
+          borderRadius={"4px"}
+          bgColor={globalStyles.grey1}
+          mr={{ base: "0px", md: "56px" }}
+        >
+          <Image src={icon} alt="logo site" />
+        </Button>
+      </VStack>
     </VStack>
   );
 };

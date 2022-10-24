@@ -18,6 +18,7 @@ import { globalStyles } from "../../styles/global";
 
 export const ModalView = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>

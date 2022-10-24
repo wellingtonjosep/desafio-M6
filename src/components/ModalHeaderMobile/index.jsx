@@ -60,17 +60,22 @@ export const ModalHeaderMobile = () => {
       >
         Fazer Login
       </Link>
-      <Button
-            fontSize={"16px"}
-            fontFamily="Inter"
-            fontWeight={"600"}
-            w={"300px"}
-            h={"48px"}
-            border={`2px solid ${globalStyles.grey4}`}
-            bgColor={globalStyles.grey10}
-          >
-            Cadastrar
-          </Button>
+      <VStack
+      paddingRight={"10px"}
+      >
+        <Button
+          fontSize={"16px"}
+          fontFamily="Inter"
+          fontWeight={"600"}
+          w={"300px"}
+          h={"48px"}
+          marginLeft={"10px"}
+          border={`2px solid ${globalStyles.grey4}`}
+          bgColor={globalStyles.grey10}
+        >
+          Cadastrar
+        </Button>
+      </VStack>
     </VStack>
   );
 };
