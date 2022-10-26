@@ -25,7 +25,14 @@ export const ModalCreatAd = () => {
 
   return (
     <>
-      <Button onClick={onOpen}> Abrir Modal </Button>
+      <Button
+        onClick={onOpen}
+        bgColor={globalStyles.whiteFixed}
+        border={`1px solid ${globalStyles.brand1}`}
+        color={globalStyles.brand1}
+      >
+        Criar Anúncio
+      </Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent maxWidth={{ base: "1036px", md: "520px" }} pb={"25px"}>
@@ -73,18 +80,18 @@ export const ModalCreatAd = () => {
               Informações do veículo
             </Text>
             <FormLabel>Título</FormLabel>
-            <Input placeholder="Título" />
+            <Input marginBottom={"15px"} placeholder="Título" />
             <HStack>
               <VStack align={"flex-start"}>
-                <FormLabel>Ano</FormLabel>
+                <FormLabel marginBottom={"0px"}>Ano</FormLabel>
                 <Input placeholder="Digitar ano" />
               </VStack>
               <VStack align={"flex-start"}>
-                <FormLabel>Quilometragem</FormLabel>
-                <Input placeholder="0" />
+                <FormLabel marginBottom={"0px"}>Quilometragem</FormLabel>
+                <Input marginTop={"0"} placeholder="0" />
               </VStack>
               <VStack align={"flex-start"}>
-                <FormLabel>Preço</FormLabel>
+                <FormLabel marginBottom={"0px"}>Preço</FormLabel>
                 <Input placeholder="Digitar preço" />
               </VStack>
             </HStack>
@@ -131,15 +138,19 @@ export const ModalCreatAd = () => {
                 </Tab>
               </TabList>
             </Tabs>
-            <FormLabel margin={"0px"} marginTop={"15px"}>
+            <FormLabel marginBottom={"8px"} marginTop={"15px"}>
               Imagem da Capa
             </FormLabel>
             <Input placeholder="Inserir URL da imagem" />
-            <FormLabel margin={"0px"} marginTop={"15px"}>
+            <FormLabel marginBottom={"8px"} marginTop={"15px"}>
               1º imagem da galeria
             </FormLabel>
             <Input placeholder="Inserir URL da imagem" />
-            <HStack margin={"10px"} justify={"flex-end"}>
+            <HStack
+              marginTop={"40px"}
+              marginBottom={"0px"}
+              justify={"flex-end"}
+            >
               <Button
                 w={"126px"}
                 bgColor={globalStyles.grey6}
