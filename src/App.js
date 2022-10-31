@@ -5,9 +5,9 @@ import { ButtonTypeAdProvider } from "./providers/ButtonTypeAd";
 function App() {
   return (
     <VStack>
-      <ButtonTypeAdProvider>
-        <Homepage />
-      </ButtonTypeAdProvider>
+        <ButtonTypeAdProvider>
+          <Homepage />
+        </ButtonTypeAdProvider>
     </VStack>
   );
 }

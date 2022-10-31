@@ -21,9 +21,23 @@ import { InputComponent } from "../Input";
 
 export const ModalEditAd = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { changeButtonType, isButtonTypeAd } = useContext(ButtonTypeAdContext);
+  const {
+    changeButtonType,
+    isButtonTypeAd,
+    changeButtonTypeVehicle,
+    isButtonTypeVehicle,
+    isButtonTypePubliched,
+    changeButtonTypePubliched,
+  } = useContext(ButtonTypeAdContext);
+
   const changeButtonTypeHandler = (buttonType) => {
     changeButtonType({ buttonType });
+  };
+  const changeButtonTypeVehicleHandler = (buttonType) => {
+    changeButtonTypeVehicle({ buttonType });
+  };
+  const changeButtonPublichedHandler = (buttonType) => {
+    changeButtonTypePubliched({ buttonType });
   };
 
   return (
@@ -158,7 +172,117 @@ export const ModalEditAd = () => {
                       background: "#495057",
                     },
                   }}
+                  border={"2px solid transparent"}
+                  _focus={{ borderColor: "#4529E6", boxShadow: "none" }}
                 />
+              </FormControl>
+
+              <FormControl mt={"20px"}>
+                <FormLabel mb={"18px"}>Tipo do anúncio</FormLabel>
+                <Flex justifyContent={"space-between"}>
+                  <ButtonComponent
+                    bgColor={isButtonTypeVehicle === "car" ? "#4529E6" : "#fff"}
+                    color={isButtonTypeVehicle === "car" ? "#fff" : "#000"}
+                    border={
+                      isButtonTypeVehicle === "car"
+                        ? "2px solid #4529E6"
+                        : "2px solid #ADB5BD"
+                    }
+                    w={"49%"}
+                    onClick={() => changeButtonTypeVehicleHandler("car")}
+                    hover={{
+                      border:
+                        isButtonTypeVehicle === "car"
+                          ? "2px solid #4529E6"
+                          : "2px solid #000",
+                    }}
+                    active={{
+                      bgColor:
+                        isButtonTypeVehicle === "motor" ? "#000" : "#fff",
+                      color:
+                        isButtonTypeVehicle === "motor" ? "#fff" : "#4529E6",
+                    }}
+                  >
+                    Carro
+                  </ButtonComponent>
+                  <ButtonComponent
+                    bgColor={
+                      isButtonTypeVehicle === "motor" ? "#4529E6" : "#fff"
+                    }
+                    color={isButtonTypeVehicle === "motor" ? "#fff" : "#000"}
+                    border={
+                      isButtonTypeVehicle === "motor"
+                        ? "2px solid #4529E6"
+                        : "2px solid #ADB5BD"
+                    }
+                    w={"49%"}
+                    onClick={() => changeButtonTypeVehicleHandler("motor")}
+                    hover={{
+                      border:
+                        isButtonTypeVehicle === "motor"
+                          ? "2px solid #4529E6"
+                          : "2px solid #000",
+                    }}
+                    active={{
+                      bgColor: isButtonTypeVehicle === "car" ? "#000" : "#fff",
+                      color: isButtonTypeVehicle === "car" ? "#fff" : "#4529E6",
+                    }}
+                  >
+                    Moto
+                  </ButtonComponent>
+                </Flex>
+              </FormControl>
+
+              <FormControl mt={"20px"}>
+                <FormLabel mb={"18px"}>Publicado</FormLabel>
+                <Flex justifyContent={"space-between"}>
+                  <ButtonComponent
+                    bgColor={isButtonTypePubliched === "yes" ? "#4529E6" : "#fff"}
+                    color={isButtonTypePubliched === "yes" ? "#fff" : "#000"}
+                    border={
+                      isButtonTypePubliched === "yes"
+                        ? "2px solid #4529E6"
+                        : "2px solid #ADB5BD"
+                    }
+                    w={"49%"}
+                    onClick={() => changeButtonPublichedHandler("yes")}
+                    hover={{
+                      border:
+                      isButtonTypePubliched === "yes"
+                          ? "2px solid #4529E6"
+                          : "2px solid #000",
+                    }}
+                    active={{
+                      bgColor: isButtonTypePubliched === "no" ? "#000" : "#fff",
+                      color: isButtonTypePubliched === "no" ? "#fff" : "#4529E6",
+                    }}
+                  >
+                    Sim
+                  </ButtonComponent>
+                  <ButtonComponent
+                    bgColor={isButtonTypePubliched === "no" ? "#4529E6" : "#fff"}
+                    color={isButtonTypePubliched === "no" ? "#fff" : "#000"}
+                    border={
+                      isButtonTypePubliched === "no"
+                        ? "2px solid #4529E6"
+                        : "2px solid #ADB5BD"
+                    }
+                    w={"49%"}
+                    onClick={() => changeButtonPublichedHandler("no")}
+                    hover={{
+                      border:
+                      isButtonTypePubliched === "no"
+                          ? "2px solid #4529E6"
+                          : "2px solid #000",
+                    }}
+                    active={{
+                      bgColor: isButtonTypePubliched === "yes" ? "#000" : "#fff",
+                      color: isButtonTypePubliched === "yes" ? "#fff" : "#4529E6",
+                    }}
+                  >
+                    Não
+                  </ButtonComponent>
+                </Flex>
               </FormControl>
             </ModalBody>
             <ModalFooter justifyContent={"flex-start"}>
