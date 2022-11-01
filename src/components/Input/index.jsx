@@ -5,11 +5,27 @@ import {
   Input,
 } from "@chakra-ui/react";
 
-export const InputComponent = ({ placeholder, error, type, register }) => {
+export const InputComponent = ({
+  title,
+  w,
+  maxW,
+  placeholder,
+  error,
+  type,
+  register,
+  fontSize,
+  borderRadius,
+  colSpan,
+}) => {
   return (
-    <FormControl isInvalid={error}>
-      <FormLabel>Descrição</FormLabel>
-      <Input {...register} placeholder={placeholder} type={type} />
+    <FormControl colSpan={colSpan} isInvalid={error} w={w} maxW={maxW}>
+      <FormLabel fontSize={fontSize}>{title}</FormLabel>
+      <Input
+        {...register}
+        placeholder={placeholder}
+        borderRadius={borderRadius}
+        type={type}
+      />
       <FormErrorMessage>Insira um texto</FormErrorMessage>
     </FormControl>
   );
