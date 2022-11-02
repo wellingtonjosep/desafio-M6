@@ -1,0 +1,11 @@
+body {
+    background-color: #F1F3F5 !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    -webkit-margin-start: 0;
+}
