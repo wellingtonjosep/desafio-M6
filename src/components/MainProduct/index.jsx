@@ -9,8 +9,7 @@ export const MainProduct = () => {
     {image: "https://th.bing.com/th/id/R.e52b2d4b0547111ab9fdcf1bdac30967?rik=JzxbLVp2TwBk%2fA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-OedHxvP4PSM%2fUYVtHwKhFvI%2fAAAAAAACTw4%2f858MnA5qZ-A%2fs1600%2fcarros-imagens%2b(10).jpg&ehk=BVxiZtIXPAUBSMS%2flC%2fY7qduUzWszETwHqtAh4AAQG8%3d&risl=&pid=ImgRaw&r=0"},
     {image: "https://th.bing.com/th/id/R.e52b2d4b0547111ab9fdcf1bdac30967?rik=JzxbLVp2TwBk%2fA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-OedHxvP4PSM%2fUYVtHwKhFvI%2fAAAAAAACTw4%2f858MnA5qZ-A%2fs1600%2fcarros-imagens%2b(10).jpg&ehk=BVxiZtIXPAUBSMS%2flC%2fY7qduUzWszETwHqtAh4AAQG8%3d&risl=&pid=ImgRaw&r=0"},
   ]
-
-  const name = "Samuel Leão"
+  
   return (
     <VStack>
       <VStack>

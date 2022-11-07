@@ -20,24 +20,15 @@ import {
 } from "@chakra-ui/react";
 import { globalStyles } from "../../styles/global";
 
-export const ModalCreatAd = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+export const ModalCreatAd = ({ setIsOpen }) => {
 
   return (
     <>
-      <Button
-        onClick={onOpen}
-        bgColor={globalStyles.whiteFixed}
-        border={`1px solid ${globalStyles.brand1}`}
-        color={globalStyles.brand1}
-      >
-        Criar Anúncio
-      </Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={true} >
         <ModalOverlay />
         <ModalContent maxWidth={{ base: "1036px", md: "520px" }} pb={"25px"}>
           <ModalHeader> Criar Anúncio</ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton onClick={() => setIsOpen(false)} />
           <ModalBody>
             <Text marginBottom={"10px"}> Tipo de anuncio </Text>
 

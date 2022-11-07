@@ -12,7 +12,9 @@ export const Footer = () => {
       alignItems={{ base: "center" }}
       bgColor={globalStyles.grey0}
       flexDirection={{ base: "column", md: "row" }}
-      mt={{ base: "100px" }}
+      mt={"75px"}
+      position={"absolute"}
+      bottom={"0px"}
     >
       <Image ml={{ base: "0px", md: "36px" }} src={logo} alt="logo site" />
       <Text
