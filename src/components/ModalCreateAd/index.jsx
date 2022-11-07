@@ -3,10 +3,8 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
   Button,
   Text,
   VStack,
@@ -21,7 +19,6 @@ import {
 import { globalStyles } from "../../styles/global";
 
 export const ModalCreatAd = ({ setIsOpen }) => {
-
   return (
     <>
       <Modal isOpen={true} >
